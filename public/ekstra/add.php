@@ -18,33 +18,27 @@ if (!isset($_SESSION['user'])) {
 <body class="bg-gray-50 min-h-screen flex items-center justify-center">
     <main class="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
         <header class="mb-6">
-            <h1 class="text-2xl font-semibold text-gray-800">Tambah Data Siswa</h1>
+            <h1 class="text-2xl font-semibold text-gray-800">Tambah Data Ekstra</h1>
             <p class="text-sm text-gray-500">Isi form berikut untuk menambahkan siswa baru ke dalam database.</p>
         </header>
 
         <form method="post" class="space-y-6">
             <div class="grid grid-cols-1 gap-4">
                 <label class="block">
-                    <span class="text-sm font-medium text-gray-700">NIS</span>
-                    <input type="text" name="nis" required
+                    <span class="text-sm font-medium text-gray-700">Nama Ekstra</span>
+                    <input type="text" name="nama_ekstra" required
                         class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none" />
                 </label>
 
                 <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Nama</span>
-                    <input type="text" name="nama" required
+                    <span class="text-sm font-medium text-gray-700">Jadwal</span>
+                    <input type="text" name="jadwal" required
                         class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none" />
                 </label>
 
                 <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Kelas</span>
-                    <input type="text" name="kelas" required
-                        class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none" />
-                </label>
-
-                <label class="block">
-                    <span class="text-sm font-medium text-gray-700">Jurusan</span>
-                    <input type="text" name="jurusan" required
+                    <span class="text-sm font-medium text-gray-700">Guru Pengajar</span>
+                    <input type="text" name="guru_ekstra" required
                         class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none" />
                 </label>
             </div>
@@ -61,12 +55,11 @@ if (!isset($_SESSION['user'])) {
 
         <?php
         if (isset($_POST['simpan'])) {
-            $stmt = $koneksi->prepare("INSERT INTO siswa (nis, nama, kelas, jurusan) VALUES (:nis, :nama, :kelas, :jurusan)");
+            $stmt = $koneksi->prepare("INSERT INTO ekstrakurikuler (nama_ekstra, jadwal, guru_ekstra) VALUES (:nama_ekstra, :jadwal, :guru_ekstra)");
             $stmt->execute([
-                ':nis' => $_POST['nis'],
-                ':nama' => $_POST['nama'],
-                ':kelas' => $_POST['kelas'],
-                ':jurusan' => $_POST['jurusan']
+                ':nama_ekstra' => $_POST['nama_ekstra'],
+                ':jadwal' => $_POST['jadwal'],
+                ':guru_ekstra' => $_POST['guru_ekstra']
             ]);
             echo "<script>alert('Data berhasil disimpan');window.location='index.php';</script>";
         }

@@ -2,7 +2,7 @@
 include '../../inc/connection.php';
 
 $id = $_GET['id'] ?? '';
-$stmt = $koneksi->prepare("SELECT * FROM siswa WHERE id = :id");
+$stmt = $koneksi->prepare("SELECT * FROM ekstrakurikuler WHERE id = :id");
 $stmt->execute([':id' => $id]);
 $d = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
@@ -33,32 +33,26 @@ if (!isset($_SESSION['user'])) {
         <form method="post" class="px-6 py-6">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
                 <div>
-                    <label for="nis" class="block text-sm font-medium text-gray-700 mb-1">NIS</label>
-                    <input id="nis" name="nis" type="text" required
-                        value="<?= htmlspecialchars($d['nis'] ?? '') ?>"
+                    <label for="nama_ekstra" class="block text-sm font-medium text-gray-700 mb-1">Nama Ekstra</label>
+                    <input id="nama_ekstra" name="nama_ekstra" type="text" required
+                        value="<?= htmlspecialchars($d['nama_ekstra'] ?? '') ?>"
                         class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                 </div>
 
                 <div>
-                    <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
-                    <input id="nama" name="nama" type="text" required
-                        value="<?= htmlspecialchars($d['nama'] ?? '') ?>"
+                    <label for="jadwal" class="block text-sm font-medium text-gray-700 mb-1">Jadwal</label>
+                    <input id="jadwal" name="jadwal" type="text" required
+                        value="<?= htmlspecialchars($d['jadwal'] ?? '') ?>"
                         class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                 </div>
 
                 <div>
-                    <label for="kelas" class="block text-sm font-medium text-gray-700 mb-1">Kelas</label>
-                    <input id="kelas" name="kelas" type="text" required
-                        value="<?= htmlspecialchars($d['kelas'] ?? '') ?>"
+                    <label for="guru_ekstra" class="block text-sm font-medium text-gray-700 mb-1">Guru Pengajar</label>
+                    <input id="guru_ekstra" name="guru_ekstra" type="text" required
+                        value="<?= htmlspecialchars($d['guru_ekstra'] ?? '') ?>"
                         class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                 </div>
 
-                <div>
-                    <label for="jurusan" class="block text-sm font-medium text-gray-700 mb-1">Jurusan</label>
-                    <input id="jurusan" name="jurusan" type="text" required
-                        value="<?= htmlspecialchars($d['jurusan'] ?? '') ?>"
-                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                </div>
             </div>
 
             <div class="mt-6 flex items-center justify-between space-x-3">
@@ -78,18 +72,16 @@ if (!isset($_SESSION['user'])) {
 
         <?php
         if (isset($_POST['update'])) {
-            $stmt = $koneksi->prepare("UPDATE siswa SET 
-                nis = :nis,
-                nama = :nama,
-                kelas = :kelas,
-                jurusan = :jurusan
+            $stmt = $koneksi->prepare("UPDATE ekstrakurikuler SET 
+                nama_ekstra = :nama_ekstra,
+                jadwal = :jadwal,
+                guru_ekstra = :guru_ekstra
                 WHERE id = :id
             ");
             $stmt->execute([
-                ':nis' => $_POST['nis'],
-                ':nama' => $_POST['nama'],
-                ':kelas' => $_POST['kelas'],
-                ':jurusan' => $_POST['jurusan'],
+                ':nama_ekstra' => $_POST['nama_ekstra'],
+                ':jadwal' => $_POST['jadwal'],
+                ':guru_ekstra' => $_POST['guru_ekstra'],
                 ':id' => $id
             ]);
             echo "<script>alert('Data berhasil diperbarui');window.location='index.php';</script>";

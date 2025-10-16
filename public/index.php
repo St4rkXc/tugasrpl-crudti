@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: ../inc/auth/login.php');
+    exit;
+}
+?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -24,6 +33,8 @@
             <a href="siswa/index.php" class="inline-block px-4 py-2 rounded-md bg-white text-indigo-600 font-medium shadow-sm hover:shadow-md transition">Data Siswa</a>
             <a href="guru/index.php" class="inline-block px-4 py-2 rounded-md bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">Data Guru</a>
             <a href="jurusan/index.php" class="inline-block px-4 py-2 rounded-md bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">Data Jurusan</a>
+            <a href="ekstra/index.php" class="inline-block px-4 py-2 rounded-md bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">Data Ektrakulikuler</a>
+            <a href="mata_pelajaran/index.php" class="inline-block px-4 py-2 rounded-md bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">Data Mata Pelajaran</a>
         </div>
     </nav>
 
@@ -38,6 +49,12 @@
         </section>
     </main>
 
+    <div class="w-full flex justify-center">
+        <a href="../inc/auth/logout.php"
+            class="inline-flex items-center rounded-lg bg-red-600 px-3 py-2 text-sm font-medium text-white hover:bg-red-700 transition">
+            Logout
+        </a>
+    </div>
     <footer class="mt-12 pb-8 text-center text-sm text-gray-500">
         © SMK TI Bali Global Denpasar
     </footer>
