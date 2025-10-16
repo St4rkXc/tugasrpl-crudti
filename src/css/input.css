@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: light --default ;
+}
+
+@theme {
+    --color-my-primary: #e6ae14;
+
+    --breakpoint-mobile-sm: 480px;
+    --breakpoint-mobile:640px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop-sm: 1024px;
+    --breakpoint-laptop: 1280px;
+    --breakpoint-desktop: 1440px;
+    --breakpoint-desktop-lg: 1600px;
+
+}
