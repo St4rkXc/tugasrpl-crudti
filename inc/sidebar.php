@@ -1,14 +1,14 @@
-<div class="flex flex-col justify-between bg-white border-r border-zinc-200 h-screen w-72 p-4 rounded-r-xl shadow-sm sticky top-0">
+<div class="flex flex-col justify-between bg-white border-r border-zinc-200 h-screen w-96 p-4 rounded-r-xl shadow-sm sticky top-0">
     <div>
         <div class="border-b-2 border-b-zinc-200 pb-3">
             <h2 class="text-lg font-semibold text-zinc-800">
-                SMK TI Bali Global
+                SMK TI Bali Global Denpasar
             </h2>
         </div>
 
         <?php
-        $currentFile = basename($_SERVER['PHP_SELF']); 
-        $currentDir = basename(dirname($_SERVER['PHP_SELF'])); 
+        $currentFile = basename($_SERVER['PHP_SELF']);
+        $currentDir = basename(dirname($_SERVER['PHP_SELF']));
         ?>
 
         <nav class="space-y-1 mt-4 flex flex-col justify-between h-full">

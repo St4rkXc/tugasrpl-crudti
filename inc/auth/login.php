@@ -30,10 +30,8 @@ if (isset($_POST['login'])) {
 <body class="min-h-screen bg-zinc-50 flex items-center justify-center px-4">
     <div class="w-full max-w-sm bg-white border border-zinc-200 rounded-2xl shadow-sm p-8">
         <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 text-zinc-600 font-bold text-lg mb-2">
-                TI
-            </div>
-            <h1 class="text-xl font-semibold text-zinc-800">SMK TI Bali Global Denpasar</h1>
+            <img src="../../src/img/logosekolahti.png" class="h-17 w-16" alt="">
+            <h1 class="text-xl font-semibold text-zinc-800 mt-4">SMK TI Bali Global Denpasar</h1>
             <p class="text-sm text-zinc-500 mt-1">Masuk untuk melanjutkan</p>
         </div>
 
@@ -47,23 +45,23 @@ if (isset($_POST['login'])) {
             <div class="space-y-1">
                 <label for="username" class="text-sm font-medium text-zinc-700">Username</label>
                 <input id="username" name="username" type="text" required
-                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinx-500 focus:border-transparent" />
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
             </div>
 
             <div class="space-y-1">
                 <label for="password" class="text-sm font-medium text-zinc-700">Password</label>
                 <input id="password" name="password" type="password" required
-                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent" />
+                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
             </div>
 
             <button name="login" type="submit"
-                class="w-full mt-4 py-2.5 rounded-lg bg-zinc-600 text-white text-sm font-medium hover:bg-zinc-700 focus:ring-2 focus:ring-zinc-500 transition">
+                class="w-full mt-4 py-2.5 rounded-lg bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700  transition">
                 Masuk
             </button>
 
             <p class="text-center text-sm text-zinc-500 mt-3">
                 Belum punya akun?
-                <a href="#" class="text-zinc-600 hover:underline">Daftar</a>
+                <a href="#" class="text-zinc-600 hover:underline font-semibold">Daftar</a>
             </p>
         </form>
 

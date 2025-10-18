@@ -17,40 +17,41 @@ $d = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 
 <body class="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4">
-    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-lg ring-1 ring-gray-100 overflow-hidden">
+    <div class="w-full max-w-md bg-white rounded-lg shadow border border-zinc-200 overflow-hidden">
         <div class="px-6 py-5 border-b border-gray-100">
             <h1 class="text-2xl font-semibold text-gray-800">Edit Data Guru</h1>
             <p class="mt-1 text-sm text-gray-500">Perbarui informasi guru di bawah ini.</p>
+            <span class="text-sm text-gray-500">Terakhir diedit untuk ID: <span class="font-medium text-gray-700"><?= htmlspecialchars($id) ?></span></span>
         </div>
 
         <form method="post" class="px-6 py-6">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+            <div class="grid grid-cols-1 gap-6 ">
                 <div>
                     <label for="nip" class="block text-sm font-medium text-gray-700 mb-1">NIP</label>
                     <input id="nip" name="nip" type="text" required
                         value="<?= htmlspecialchars($d['nip'] ?? '') ?>"
-                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none " />
                 </div>
 
                 <div>
                     <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
                     <input id="nama" name="nama" type="text" required
                         value="<?= htmlspecialchars($d['nama'] ?? '') ?>"
-                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none " />
                 </div>
 
-                <div class="sm:col-span-2">
+                <div class="">
                     <label for="mapel" class="block text-sm font-medium text-gray-700 mb-1">Mata Pelajaran</label>
                     <input id="mapel" name="mapel" type="text" required
                         value="<?= htmlspecialchars($d['mapel'] ?? '') ?>"
-                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none " />
                 </div>
             </div>
 
             <div class="mt-6 flex items-center justify-between space-x-3">
                 <div class="flex items-center space-x-2">
                     <button type="submit" name="update"
-                        class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        class="inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         Simpan Perubahan
                     </button>
                     <a href="index.php"
@@ -58,7 +59,7 @@ $d = $stmt->fetch(PDO::FETCH_ASSOC);
                         Batal
                     </a>
                 </div>
-                <span class="text-sm text-gray-500">Terakhir diedit untuk ID: <span class="font-medium text-gray-700"><?= htmlspecialchars($id) ?></span></span>
+
             </div>
         </form>
 

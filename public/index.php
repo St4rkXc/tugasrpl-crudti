@@ -20,8 +20,8 @@ if (!isset($_SESSION['user'])) {
     <!-- Header -->
     <header class="bg-white border-b shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                
+            <div class="flex items-center gap-4">
+                <img src="../src/img/logosekolahti.png" class="h-10 w-8" alt="">
                 <div>
                     <h1 class="text-lg md:text-xl font-semibold text-zinc-800">SMK TI Bali Global Denpasar</h1>
                     <p class="text-xs text-zinc-500">Sistem Informasi Manajemen Sekolah</p>
@@ -38,13 +38,13 @@ if (!isset($_SESSION['user'])) {
 
     <!-- Main -->
     <main class="flex-grow">
-        <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="max-w-6xl w-fit mx-auto px-6 py-16">
             <div class="bg-white border rounded-xl shadow-sm p-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-semibold text-zinc-800">
+                <h2 class="text-2xl md:text-xl font-semibold text-zinc-800">
                     Selamat Datang di Sistem Informasi Sekolah
                 </h2>
-                <p class="mt-3 text-zinc-500">
-                    Kelola data siswa, guru, dan jurusan dengan tampilan modern dan mudah digunakan.
+                <p class="mt-1 text-zinc-400 text-sm">
+                    Kelola data siswa, guru, dan jurusan sekolah.
                 </p>
 
                 <div class="mt-8 max-w-md mx-auto flex flex-col gap-2">
