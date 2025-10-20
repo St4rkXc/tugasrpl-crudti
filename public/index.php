@@ -13,12 +13,12 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SMK TI Bali Global Denpasar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/output.css">
 </head>
 
 <body class="min-h-screen bg-zinc-50 text-zinc-800 font-sans flex flex-col">
     <!-- Header -->
-    <header class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <header class="bg-white border-b-zinc-200 shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <img src="../src/img/logosekolahti.png" class="h-10 w-8" alt="">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['user'])) {
     <!-- Main -->
     <main class="flex-grow">
         <div class="max-w-6xl w-fit mx-auto px-6 py-16">
-            <div class="bg-white border rounded-xl shadow-sm p-8 text-center">
+            <div class="bg-white border border-zinc-200  rounded-xl shadow-sm p-8 text-center">
                 <h2 class="text-2xl md:text-xl font-semibold text-zinc-800">
                     Selamat Datang di Sistem Informasi Sekolah
                 </h2>

@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Tambah Siswa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../src/css/output.css">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex items-center justify-center">
