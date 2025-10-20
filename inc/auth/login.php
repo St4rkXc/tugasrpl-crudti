@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Login — SMK TI Bali Global Denpasar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../src/css/output.css">
 </head>
 
 <body class="min-h-screen bg-zinc-50 flex items-center justify-center px-4">
@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
 
             <p class="text-center text-sm text-zinc-500 mt-3">
                 Belum punya akun?
-                <a href="#" class="text-zinc-600 hover:underline font-semibold">Daftar</a>
+                <a href="register.php" class="text-zinc-600 hover:underline font-semibold">Daftar</a>
             </p>
         </form>
 

@@ -7,6 +7,7 @@ if (!isset($_SESSION['user'])) {
     header('Location: ../inc/auth/login.php');
     exit;
 }
+$username = htmlspecialchars($_SESSION['user']['username']);
 ?>
 
 <head>
@@ -25,6 +26,7 @@ if (!isset($_SESSION['user'])) {
                 <div>
                     <h1 class="text-lg md:text-xl font-semibold text-zinc-800">SMK TI Bali Global Denpasar</h1>
                     <p class="text-xs text-zinc-500">Sistem Informasi Manajemen Sekolah</p>
+
                 </div>
             </div>
 
@@ -40,6 +42,7 @@ if (!isset($_SESSION['user'])) {
     <main class="flex-grow">
         <div class="max-w-6xl w-fit mx-auto px-6 py-16">
             <div class="bg-white border border-zinc-200  rounded-xl shadow-sm p-8 text-center">
+                <h2 class="text-xl font-semibold text-zinc-800">Halo👋🏻,  <?php echo $username; ?></h2>
                 <h2 class="text-2xl md:text-xl font-semibold text-zinc-800">
                     Selamat Datang di Sistem Informasi Sekolah
                 </h2>
