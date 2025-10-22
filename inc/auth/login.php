@@ -41,17 +41,19 @@ if (isset($_POST['login'])) {
             </div>
         <?php endif; ?>
 
-        <form method="post" class="space-y-4">
-            <div class="space-y-1">
-                <label for="username" class="text-sm font-medium text-zinc-700">Username</label>
-                <input id="username" name="username" type="text" required
-                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
-            </div>
+        <form method="post" class="space-y-3">
+            <div class="space-y-2">
+                <div class="space-y-1">
+                    <label for="username" class="text-sm font-medium text-zinc-700">Username</label>
+                    <input id="username" name="username" type="text" required
+                        class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
+                </div>
 
-            <div class="space-y-1">
-                <label for="password" class="text-sm font-medium text-zinc-700">Password</label>
-                <input id="password" name="password" type="password" required
-                    class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
+                <div class="space-y-1">
+                    <label for="password" class="text-sm font-medium text-zinc-700">Password</label>
+                    <input id="password" name="password" type="password" required
+                        class="w-full px-3 py-2 text-sm rounded-lg border border-zinc-300 bg-white text-zinc-800 placeholder-zinc-400 focus:outline-none  " />
+                </div>
             </div>
 
             <button name="login" type="submit"

@@ -39,7 +39,8 @@ if (isset($_POST['register'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Daftar — SMK TI Bali Global Denpasar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../src/css/output.css">
+
 </head>
 
 <body class="min-h-screen bg-zinc-50 flex items-center justify-center px-4">
@@ -47,7 +48,7 @@ if (isset($_POST['register'])) {
         <div class="flex flex-col items-center text-center mb-6">
             <img src="../../src/img/logosekolahti.png" class="h-17 w-16" alt="">
             <h1 class="text-xl font-semibold text-zinc-800 mt-4">Buat Akun Baru</h1>
-            <p class="text-sm text-zinc-500 mt-1">Isi data untuk mendaftar</p>
+            <p class="text-sm text-zinc-500 mt-1 ">Isi data anda dan pastikan data anda tidak digunakan oleh orang lain</p>
         </div>
 
         <?php if (!empty($error)) : ?>

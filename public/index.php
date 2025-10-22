@@ -53,7 +53,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
                 <div class="mt-8 max-w-md mx-auto flex flex-col gap-2">
                     <a href="siswa/index.php"
                         class="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
-                        <span>Data Siswa</span>
+                        <span class="text-[14px] font-semibold">Data Siswa</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400 group-hover:text-zinc-600 transition"
                             viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -64,7 +64,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
 
                     <a href="guru/index.php"
                         class="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
-                        <span>Data Guru</span>
+                        <span class="text-[14px] font-semibold">Data Guru</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L12.586 8H9a1 1 0 110-2h6a1 1 0 011 1v6a1 1 0 11-2 0V8.414l-5.293 5.293a1 1 0 01-1.414 0z"
@@ -74,7 +74,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
 
                     <a href="jurusan/index.php"
                         class="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
-                        <span>Data Jurusan</span>
+                        <span class="text-[14px] font-semibold">Data Jurusan</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L12.586 8H9a1 1 0 110-2h6a1 1 0 011 1v6a1 1 0 11-2 0V8.414l-5.293 5.293a1 1 0 01-1.414 0z"
@@ -84,7 +84,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
 
                     <a href="ekstra/index.php"
                         class="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
-                        <span>Data Ekstrakurikuler</span>
+                        <span class="text-[14px] font-semibold">Data Ekstrakurikuler</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L12.586 8H9a1 1 0 110-2h6a1 1 0 011 1v6a1 1 0 11-2 0V8.414l-5.293 5.293a1 1 0 01-1.414 0z"
@@ -94,7 +94,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
 
                     <a href="mata_pelajaran/index.php"
                         class="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
-                        <span>Data Mata Pelajaran</span>
+                        <span class="text-[14px] font-semibold">Data Mata Pelajaran</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L12.586 8H9a1 1 0 110-2h6a1 1 0 011 1v6a1 1 0 11-2 0V8.414l-5.293 5.293a1 1 0 01-1.414 0z"
@@ -108,7 +108,7 @@ $username = htmlspecialchars($_SESSION['user']['username']);
     </main>
 
     <!-- Footer -->
-    <footer class="border-t bg-white py-6 text-center text-sm text-zinc-500">
+    <footer class="border-t border-zinc-200 bg-white py-6 text-center text-sm text-zinc-500">
         © 2025 SMK TI Bali Global Denpasar — All rights reserved.
     </footer>
 </body>
